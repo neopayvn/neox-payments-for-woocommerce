@@ -1,0 +1,324 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Blank WordPress Pot v1.0.0\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2022-10-17 23:25+0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Your Team <translations@example.com>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ../../../../xampp/htdocs/neopay/wp-content/plugins/"
+"woocommerce-neox-gateway\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/class-neox-admin-page.php:39
+msgid "Settings saved"
+msgstr "Lưu cài đặt"
+
+#: inc/class-neox-admin-page.php:44
+msgid "Can not save settings! Please refresh this page."
+msgstr "Không thể lưu cài đặt! Vui lòng tải lại trang."
+
+#: inc/class-neox-admin-page.php:56
+msgid "NeoX Settings"
+msgstr "Cài đặt NeoX"
+
+#: inc/class-neox-admin-page.php:84
+msgid "Add the NeoX Payment Gateway"
+msgstr "Thêm cổng thanh toán NeoX"
+
+#: inc/class-neox-admin-page.php:91 inc/class-neox-admin-page.php:117
+#: inc/class-neox-admin-page.php:134
+msgid "Enabled"
+msgstr "Kích hoạt"
+
+#: inc/class-neox-admin-page.php:96
+#, php-format
+msgid "Your store currency is <code>%s</code>. "
+msgstr "Đơn vị tiền tệ trong cửa hàng của bạn là <code>% s </code>."
+
+#: inc/class-neox-admin-page.php:98
+msgid "NeoX can work on your site."
+msgstr "NeoX có thể hoạt động trên trang của bạn."
+
+#: inc/class-neox-admin-page.php:101
+#, php-format
+msgid ""
+"Please configure this gateway under <a href=\"%s\">WooCommerce -> Settings -"
+"> Checkout</a>."
+msgstr ""
+"Vui lòng cài đặt cấu hình cổng thanh toán trong <a href=\"%s\"> WooCommerce -"
+"> Cài đặt -> Thanh toán </a>."
+
+#: inc/class-neox-admin-page.php:104
+msgid ""
+"<span style=\"color: red\" \">This gateway is not active on your site. "
+"Because NeoX supports VND only.</span>"
+msgstr ""
+"<span style=\"color: red\" \">Cổng thanh toán không hoạt động trên trang của "
+"bạn. Bởi vì NeoX chỉ hỗ trợ VND.</span>"
+
+#: inc/class-neox-admin-page.php:110
+msgid "Change VND currency symbol"
+msgstr "Thay đổi biểu tượng tiền tệ"
+
+#: inc/class-neox-admin-page.php:123
+msgid "Insert a text to change the default symbol <code>đ</code>"
+msgstr "Nhập nội dung để thay đổi ký tự mặc định <code>đ</code>"
+
+#: inc/class-neox-admin-page.php:127
+msgid "Convert <code>000</code> of prices to K (or anything)"
+msgstr "Chuyển đổi <code>000</code> của giá thành K (hoặc khác)"
+
+#: inc/class-neox-admin-page.php:140
+msgid "Choose what you want to change. E.g:"
+msgstr "Chọn thứ mà bạn muốn thay đổi: Ví dụ:"
+
+#: inc/class-neox-admin-page.php:156
+#, php-format
+msgid ""
+"Wanna get support or give feedback? Please <a href=\"%1$s\">rate NeoX</a> or "
+"post questions <a href=\"%2$s\">in the forum</a>!"
+msgstr ""
+"Nhận hỗ trợ hoặc gửi phản hồi? Vui lòng<a href=\"%1$s\">đánh giá NeoX</a> "
+"hoặc gửi câu hỏi <a href=\"%2$s\">vào forum</a>!"
+
+#: inc/class-wc-gateway-neox.php:15 inc/neox/neox-settings.php:15
+msgid "NeoX Payment Gateway (by NeoPay)"
+msgstr "Cổng thanh toán NeoX (bởi NeoPay)"
+
+#: inc/class-wc-gateway-neox.php:16
+msgid "NeoX supports all major bank ATMs in Vietnam."
+msgstr "NeoX hỗ trợ tất cả ngân hàng nội địa Việt Nam."
+
+#: inc/class-wc-gateway-neox.php:26
+msgid "Payment success"
+msgstr "Thanh toán thành công"
+
+#: inc/class-wc-gateway-neox.php:29
+msgid "Orders are pending payment"
+msgstr "Đơn hàng đang chờ thanh toán"
+
+#: inc/class-wc-gateway-neox.php:32
+msgid "Order cancelled by customer"
+msgstr "Khách hàng đã hủy đơn hàng"
+
+#: inc/class-wc-gateway-neox.php:35
+msgid "Duplicated neo_MerchantTxnId"
+msgstr "Mã neo_MerchantTxnId bị trùng"
+
+#: inc/class-wc-gateway-neox.php:38
+msgid "Invalid neo_OrderId"
+msgstr "Mã neo_OrderId không hợp lệ"
+
+#: inc/class-wc-gateway-neox.php:41
+msgid "Invalid neo_MerchantTxnId"
+msgstr "Mã neo_MerchantTxnId không hợp lệ"
+
+#: inc/class-wc-gateway-neox.php:44
+msgid "Order processing, have at least a payment in progress"
+msgstr ""
+"Đang xử lý đơn hàng, có ít nhất một khoản thanh toán đang được tiến hành"
+
+#: inc/class-wc-gateway-neox.php:47
+msgid "Order has expired"
+msgstr "Đơn hàng đã hết hạn"
+
+#: inc/class-wc-gateway-neox.php:50
+msgid "Transaction failed"
+msgstr "Giao dịch thất bại"
+
+#: inc/neox/abstract-payment.php:255
+#, php-format
+msgid ""
+" Gateway Info | Code: %1$s | Message: %2$s | MerchantTxnRef: %3$s | Type: "
+"%4$s"
+msgstr ""
+" Gateway Info | Code: %1$s | Message: %2$s | MerchantTxnRef: %3$s | Type: "
+"%4$s"
+
+#: inc/neox/abstract-payment.php:282
+msgid "NeoX info: "
+msgstr "Thông tin NeoX:"
+
+#: inc/neox/neox-settings.php:13
+msgid "Enable/Disable"
+msgstr "Kích hoạt/Hủy kích hoạt"
+
+#: inc/neox/neox-settings.php:19
+msgid "NeoX Sandbox"
+msgstr "NeoX Sandbox"
+
+#: inc/neox/neox-settings.php:21
+msgid "Enable NeoX sandbox (testing)"
+msgstr "Kích hoạt NeoX sandbox (thử nghiệm)"
+
+#: inc/neox/neox-settings.php:23
+#, php-format
+msgid ""
+"NeoX sandbox can be used to test payments. See <a href=\"%s\">the testing "
+"info</a>."
+msgstr ""
+"NeoX sandbox dùng để thử nghiệm thanh toán. <a href=\"%s\">thông tin thử "
+"nghiệm</a>."
+
+#: inc/neox/neox-settings.php:26
+msgid "Title"
+msgstr "Tiêu đề"
+
+#: inc/neox/neox-settings.php:28
+msgid "This controls the title which the user sees during checkout."
+msgstr "Tiêu đề mà người dùng nhìn thấy trong quá trình thanh toán."
+
+#: inc/neox/neox-settings.php:29
+msgid "NeoX payment gateway"
+msgstr "Cổng thanh toán NeoX"
+
+#: inc/neox/neox-settings.php:33
+msgid "Description"
+msgstr "Mô tả"
+
+#: inc/neox/neox-settings.php:36
+msgid "This controls the description which the user sees during checkout."
+msgstr "Tiêu đề mà người dùng nhìn thấy trong quá trình thanh toán."
+
+#: inc/neox/neox-settings.php:37
+msgid "Payment by domestic ATM card, Visa, MasterCard or NeoX wallet."
+msgstr "Thanh toán bằng thẻ ATM nội địa, thẻ Visa, MasterCard hoặc ví NeoX."
+
+#: inc/neox/neox-settings.php:40
+msgid "Button text"
+msgstr "Nội dung nút bấm"
+
+#: inc/neox/neox-settings.php:43
+msgid "Button label in the checkout page."
+msgstr "Nhãn của nút bấm trong trang thanh toán."
+
+#: inc/neox/neox-settings.php:44
+msgid "Pay with NeoX"
+msgstr "Thanh toán bằng NeoX"
+
+#: inc/neox/neox-settings.php:47
+msgid "Payment Method"
+msgstr "Phương thức thanh toán"
+
+#: inc/neox/neox-settings.php:48
+msgid "If you do not select any payment method, the default will be 4 methods"
+msgstr ""
+"Nếu bạn không chọn phương thức thanh toán nào, mặc định sẽ là 4 phương thức."
+
+#: inc/neox/neox-settings.php:53
+msgid "NeoX Wallet"
+msgstr "Ví NeoX"
+
+#: inc/neox/neox-settings.php:58
+msgid "Domestic card"
+msgstr "Thẻ nội địa"
+
+#: inc/neox/neox-settings.php:63
+msgid "International card"
+msgstr "Thẻ quốc tế"
+
+#: inc/neox/neox-settings.php:68
+msgid "Bank transfer"
+msgstr "Chuyển khoản ngân hàng"
+
+#: inc/neox/neox-settings.php:72
+msgid "API Credentials"
+msgstr "Thông tin đăng nhập API"
+
+#: inc/neox/neox-settings.php:74
+#, php-format
+msgid ""
+"Enter your NeoX API credentials. Contact NeoX to have your credentials %shere"
+"%s."
+msgstr ""
+"Nhập thông tin đăng nhập API NeoX của bạn. Liên hệ với NeoX để có thông tin "
+"%shere%s."
+
+#: inc/neox/neox-settings.php:77
+msgid "Merchant code"
+msgstr "Mã merchant"
+
+#: inc/neox/neox-settings.php:79
+msgid "Get your Merchant code from NeoX."
+msgstr "Lấy mã Merchant từ NeoX."
+
+#: inc/neox/neox-settings.php:82 inc/neox/neox-settings.php:90
+msgid "Required. Provided by NeoX."
+msgstr "Yêu cầu. Cung cấp bởi NeoX."
+
+#: inc/neox/neox-settings.php:85
+msgid "Secret key"
+msgstr "Secret key"
+
+#: inc/neox/neox-settings.php:87
+msgid "Get your Secure Secret from NeoX."
+msgstr "Nhận Secure Secret của bạn từ NeoX."
+
+#: inc/neox/neox-settings.php:93
+msgid "Locale"
+msgstr "Ngôn ngữ"
+
+#: inc/neox/neox-settings.php:96
+msgid "Choose your locale"
+msgstr "Chọn ngôn ngữ"
+
+#: inc/neox/neox-settings.php:105
+msgid "Return Page"
+msgstr "Trang trở lại"
+
+#: inc/neox/neox-settings.php:108
+msgid "Choose return page"
+msgstr "Chọn trang"
+
+#: inc/neox/neox-settings.php:114
+msgid "Instant Payment Notification (IPN)"
+msgstr "Thông báo thanh toán (IPN)"
+
+#: inc/neox/neox-settings.php:118
+#, php-format
+msgid ""
+"%sContact NeoX%s to configure this URL on its site. <strong>This is "
+"required  based on its guidelines.</strong>"
+msgstr ""
+"%sLiên hệ NeoX%s để cấu hình URL. <strong>Điều này là cần thiết để thiết lập "
+"thanh toán.</strong>"
+
+#: inc/neox/neox-settings.php:121
+msgid "Debug log"
+msgstr "Debug log"
+
+#: inc/neox/neox-settings.php:123
+msgid "Enable logging"
+msgstr "Kích hoạt log"
+
+#: inc/neox/neox-settings.php:125
+#, php-format
+msgid "Log events, such as IPN requests, inside %s"
+msgstr "Ghi nhật ký các sự kiện %s"
+
+#: neox.php:73
+msgid ""
+"NeoX is not running because WooCommerce is not active. Please activate both "
+"plugins."
+msgstr ""
+"NeoX không chạy vì WooCommerce không hoạt động. Vui lòng kích hoạt cả hai "
+"plugin."
+
+#: neox.php:160
+msgid "Settings"
+msgstr "Cài đặt"
