@@ -172,5 +172,5 @@ class NeoX_Admin_Page
         </div><!-- #wrap ->
         <?php
     }
-    
+
 }
