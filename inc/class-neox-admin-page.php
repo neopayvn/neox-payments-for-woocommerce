@@ -33,11 +33,16 @@ class NeoX_Admin_Page {
 	 */
 	public function save_settings() {
 		if ( wp_verify_nonce( $_REQUEST['neox_nonce'], 'neox_save_settings' ) ) {
-			update_option( 'neox', wc_clean(wp_unslash($_REQUEST['settings'])) );
-			$this->message =
-				'<div class="updated notice"><p><strong>' .
-				__( 'Settings saved', 'neox-payments-for-woocommerce' ) .
-				'</p></strong></div>';
+            $settings = wc_clean(wp_unslash($_REQUEST['settings']));
+            if( is_array($settings) ){
+                $settings['change_currency_symbol']['text'] = sanitize_text_field($settings['change_currency_symbol']['text']);
+                $settings['$convert_price']['text'] = sanitize_text_field($settings['$convert_price']['text']);
+                update_option( 'neox', $settings );
+                $this->message =
+                    '<div class="updated notice"><p><strong>' .
+                    __( 'Settings saved', 'neox-payments-for-woocommerce' ) .
+                    '</p></strong></div>';
+            }
 		} else {
 			$this->message =
 				'<div class="error notice"><p><strong>' .

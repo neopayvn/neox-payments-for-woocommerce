@@ -50,16 +50,15 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway {
 		$this->init_settings();
 
 		// Define user set variables.
-		$this->title             = $this->get_option( 'title' );
-		$this->description       = $this->get_option( 'description' )
+		$this->title             = sanitize_text_field($this->get_option( 'title' ));
+		$this->description       = sanitize_text_field($this->get_option( 'description' ))
 		                           . sprintf( '<br/><div align="center" class="neox-logo" id="%1$s"><img src="%2$s"></div>',
 				$this->id . '_logo.png',
 				apply_filters( $this->id . '_logo', WOO_NEOX_URL . "assets/$this->id.png" ) );
 		$this->order_button_text = $this->get_option( 'order_button_text' );
 		$this->testmode      = 'yes' === $this->get_option( 'testmode', 'no' );
-		$this->merchant_code   = $this->get_option( 'merchant_code' );
-		$this->access_code   = $this->get_option( 'access_code' );
-		$this->secret_key = $this->get_option( 'secret_key' );
+		$this->merchant_code   = sanitize_text_field($this->get_option( 'merchant_code' ));
+		$this->secret_key = sanitize_text_field($this->get_option( 'secret_key' ));
         $this->return_url = $this->get_option('return_url');
 		$this->debug         = 'yes' === $this->get_option( 'debug', 'no' );
         $this->wallet = 'yes' === $this->get_option('wallet', 'no');
@@ -189,10 +188,10 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway {
         $hash_data_str = '';
         foreach ($hash_fields as $key => $value) {
             if (isset($args[$value])) {
-                $hash_data_str .= $args[$value];
+                $hash_data_str .= sanitize_text_field($args[$value]);
             }
         }
-        $hash_data_str .= $this->secret_key;
+        $hash_data_str .= sanitize_text_field($this->secret_key);
         $hash_result = hash('sha256', $hash_data_str);
         return strtoupper($hash_result);
 	}
@@ -202,7 +201,7 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway {
 	 */
 	public function handle_neox_return_url() {
 		if ( isset( $_GET['neo_SecureHash'] ) ) {
-			$this->process_neox_response_data( $_GET, 'return' );
+			$this->process_neox_response_data( wc_clean(wp_unslash($_GET)), 'return' );
 		}
 	}
 
@@ -228,7 +227,7 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway {
 		switch ( $type ) {
 			case 'return':
 			case 'ipn':
-				$neo_SecureHash = $args['neo_SecureHash'];
+				$neo_SecureHash = sanitize_text_field( $args['neo_SecureHash'] );
 
 				// Remove the parameter "neo_SecureHash" for validating SecureHash
 				unset( $args['neo_SecureHash'] );
@@ -242,11 +241,11 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway {
 			 * $neo_MerchantTxnID looks like this "139_20170418101843" or {order_id}_{date_time}
 			 * @see $this->get_pay_url();
 			 */
-			$neo_MerchantTxnID     = $args['neo_MerchantTxnID'];
-			$neo_ResponseCode = $args['neo_ResponseCode'];
+			$neo_MerchantTxnID     = sanitize_text_field( $args['neo_MerchantTxnID'] );
+			$neo_ResponseCode = sanitize_text_field( $args['neo_ResponseCode'] );
 
 			// Get the order_id part only
-			$order_id = $args['neo_OrderID'];
+			$order_id = sanitize_text_field( $args['neo_OrderID'] );
 
 			$order = wc_get_order( $order_id );
 
@@ -351,7 +350,7 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway {
 	 */
 	public function handle_neox_ipn() {
 		if ( isset( $_REQUEST['neo_SecureHash'] ) ) {
-			$this->process_neox_response_data( $_REQUEST, 'ipn' );
+			$this->process_neox_response_data( wc_clean(wp_unslash($_REQUEST)), 'ipn' );
 		}
 	}
 

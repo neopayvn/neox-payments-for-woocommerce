@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-10-25 09:49+0700\n"
+"POT-Creation-Date: 2022-10-25 11:08+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -24,37 +24,37 @@ msgstr ""
 "X-Generator: Poedit 3.1.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: inc/class-neox-admin-page.php:39
+#: inc/class-neox-admin-page.php:43
 msgid "Settings saved"
 msgstr "Đã lưu cài đặt"
 
-#: inc/class-neox-admin-page.php:44
+#: inc/class-neox-admin-page.php:49
 msgid "Can not save settings! Please refresh this page."
 msgstr "Không thể lưu cài đặt! Vui lòng tải lại trang"
 
-#: inc/class-neox-admin-page.php:56
+#: inc/class-neox-admin-page.php:61
 msgid "NeoX Settings"
 msgstr "Cấu hình NeoX"
 
-#: inc/class-neox-admin-page.php:84
+#: inc/class-neox-admin-page.php:89
 msgid "Add the NeoX Payment Gateway"
 msgstr "Thêm cổng thanh toán NeoX"
 
-#: inc/class-neox-admin-page.php:91 inc/class-neox-admin-page.php:117
-#: inc/class-neox-admin-page.php:134
+#: inc/class-neox-admin-page.php:96 inc/class-neox-admin-page.php:122
+#: inc/class-neox-admin-page.php:139
 msgid "Enabled"
 msgstr "Kích hoạt"
 
-#: inc/class-neox-admin-page.php:96
+#: inc/class-neox-admin-page.php:101
 #, php-format
 msgid "Your store currency is <code>%s</code>. "
 msgstr "Đơn vị tiền tệ trong cửa hàng của bạn là <code>% s </code>."
 
-#: inc/class-neox-admin-page.php:98
+#: inc/class-neox-admin-page.php:103
 msgid "NeoX can work on your site."
 msgstr "NeoX có thể hoạt động trên trang của bạn."
 
-#: inc/class-neox-admin-page.php:101
+#: inc/class-neox-admin-page.php:106
 #, php-format
 msgid ""
 "Please configure this gateway under <a href=\"%s\">WooCommerce -> Settings -"
@@ -63,7 +63,7 @@ msgstr ""
 "Vui lòng cài đặt cấu hình cổng thanh toán trong <a href=\"%s\"> WooCommerce -"
 "> Cài đặt -> Thanh toán </a>."
 
-#: inc/class-neox-admin-page.php:104
+#: inc/class-neox-admin-page.php:109
 msgid ""
 "<span style=\"color: red\" \">This gateway is not active on your site. "
 "Because NeoX supports VND only.</span>"
@@ -71,23 +71,23 @@ msgstr ""
 "<span style=\"color: red\" \">Cổng thanh toán không hoạt động trên trang của "
 "bạn. Bởi vì NeoX chỉ hỗ trợ VND.</span>"
 
-#: inc/class-neox-admin-page.php:110
+#: inc/class-neox-admin-page.php:115
 msgid "Change VND currency symbol"
 msgstr "Thay đổi biểu tượng tiền tệ"
 
-#: inc/class-neox-admin-page.php:123
+#: inc/class-neox-admin-page.php:128
 msgid "Insert a text to change the default symbol <code>đ</code>"
 msgstr "Nhập nội dung để thay đổi ký tự mặc định <code>đ</code>"
 
-#: inc/class-neox-admin-page.php:127
+#: inc/class-neox-admin-page.php:132
 msgid "Convert <code>000</code> of prices to K (or anything)"
 msgstr "Chuyển đổi <code>000</code> của giá thành K (hoặc khác)"
 
-#: inc/class-neox-admin-page.php:140
+#: inc/class-neox-admin-page.php:145
 msgid "Choose what you want to change. E.g:"
 msgstr "Chọn thứ mà bạn muốn thay đổi: Ví dụ:"
 
-#: inc/class-neox-admin-page.php:156
+#: inc/class-neox-admin-page.php:161
 #, php-format
 msgid ""
 "Wanna get support or give feedback? Please <a href=\"%1$s\">rate NeoX</a> or "
@@ -141,7 +141,7 @@ msgstr "Đơn hàng đã hết hạn"
 msgid "Transaction failed"
 msgstr "Giao dịch thất bại"
 
-#: inc/neox/abstract-payment.php:255
+#: inc/neox/abstract-payment.php:254
 #, php-format
 msgid ""
 " Gateway Info | Code: %1$s | Message: %2$s | MerchantTxnRef: %3$s | Type: "
@@ -150,7 +150,7 @@ msgstr ""
 " Gateway Info | Code: %1$s | Message: %2$s | MerchantTxnRef: %3$s | Type: "
 "%4$s"
 
-#: inc/neox/abstract-payment.php:283
+#: inc/neox/abstract-payment.php:282
 msgid "NeoX info: "
 msgstr "Thông tin NeoX:"
 
