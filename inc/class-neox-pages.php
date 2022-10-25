@@ -1,10 +1,12 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
-class NeoX_Pages {
-    static function get_pages() {
+class NeoX_Pages
+{
+    static function get_pages()
+    {
         $pagesList = array();
         $pages = get_pages();
         if (!empty($pages)) {
