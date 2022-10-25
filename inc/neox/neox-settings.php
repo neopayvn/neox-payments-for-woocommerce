@@ -95,9 +95,9 @@ return array(
         'class' => 'wc-enhanced-select',
         'description' => __('Choose your locale', 'neox-payments-for-woocommerce'),
         'desc_tip' => true,
-        'default' => 'vn',
+        'default' => 'en',
         'options' => array(
-            'vn' => 'vn',
+            'vn' => 'vi',
             'en' => 'en'
         )
     ),

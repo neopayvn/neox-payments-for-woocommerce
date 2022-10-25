@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-10-17 23:25+0700\n"
+"POT-Creation-Date: 2022-10-25 09:49+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -19,22 +19,22 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
 "_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
-"X-Poedit-Basepath: ../../../../xampp/htdocs/neopay/wp-content/plugins/"
-"woocommerce-neox-gateway\n"
+"X-Poedit-Basepath: ../../../../xampp/htdocs/woo/wp-content/plugins/neox-"
+"payments-for-woocommerce\n"
 "X-Generator: Poedit 3.1.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: inc/class-neox-admin-page.php:39
 msgid "Settings saved"
-msgstr "Lưu cài đặt"
+msgstr "Đã lưu cài đặt"
 
 #: inc/class-neox-admin-page.php:44
 msgid "Can not save settings! Please refresh this page."
-msgstr "Không thể lưu cài đặt! Vui lòng tải lại trang."
+msgstr "Không thể lưu cài đặt! Vui lòng tải lại trang"
 
 #: inc/class-neox-admin-page.php:56
 msgid "NeoX Settings"
-msgstr "Cài đặt NeoX"
+msgstr "Cấu hình NeoX"
 
 #: inc/class-neox-admin-page.php:84
 msgid "Add the NeoX Payment Gateway"
@@ -96,48 +96,48 @@ msgstr ""
 "Nhận hỗ trợ hoặc gửi phản hồi? Vui lòng<a href=\"%1$s\">đánh giá NeoX</a> "
 "hoặc gửi câu hỏi <a href=\"%2$s\">vào forum</a>!"
 
-#: inc/class-wc-gateway-neox.php:15 inc/neox/neox-settings.php:15
+#: inc/class-neox-payment.php:13 inc/neox/neox-settings.php:15
 msgid "NeoX Payment Gateway (by NeoPay)"
 msgstr "Cổng thanh toán NeoX (bởi NeoPay)"
 
-#: inc/class-wc-gateway-neox.php:16
+#: inc/class-neox-payment.php:14
 msgid "NeoX supports all major bank ATMs in Vietnam."
 msgstr "NeoX hỗ trợ tất cả ngân hàng nội địa Việt Nam."
 
-#: inc/class-wc-gateway-neox.php:26
+#: inc/class-neox-payment.php:24
 msgid "Payment success"
 msgstr "Thanh toán thành công"
 
-#: inc/class-wc-gateway-neox.php:29
+#: inc/class-neox-payment.php:27
 msgid "Orders are pending payment"
 msgstr "Đơn hàng đang chờ thanh toán"
 
-#: inc/class-wc-gateway-neox.php:32
+#: inc/class-neox-payment.php:30
 msgid "Order cancelled by customer"
 msgstr "Khách hàng đã hủy đơn hàng"
 
-#: inc/class-wc-gateway-neox.php:35
+#: inc/class-neox-payment.php:33
 msgid "Duplicated neo_MerchantTxnId"
 msgstr "Mã neo_MerchantTxnId bị trùng"
 
-#: inc/class-wc-gateway-neox.php:38
+#: inc/class-neox-payment.php:36
 msgid "Invalid neo_OrderId"
 msgstr "Mã neo_OrderId không hợp lệ"
 
-#: inc/class-wc-gateway-neox.php:41
+#: inc/class-neox-payment.php:39
 msgid "Invalid neo_MerchantTxnId"
 msgstr "Mã neo_MerchantTxnId không hợp lệ"
 
-#: inc/class-wc-gateway-neox.php:44
+#: inc/class-neox-payment.php:42
 msgid "Order processing, have at least a payment in progress"
 msgstr ""
 "Đang xử lý đơn hàng, có ít nhất một khoản thanh toán đang được tiến hành"
 
-#: inc/class-wc-gateway-neox.php:47
+#: inc/class-neox-payment.php:45
 msgid "Order has expired"
 msgstr "Đơn hàng đã hết hạn"
 
-#: inc/class-wc-gateway-neox.php:50
+#: inc/class-neox-payment.php:48
 msgid "Transaction failed"
 msgstr "Giao dịch thất bại"
 
@@ -150,7 +150,7 @@ msgstr ""
 " Gateway Info | Code: %1$s | Message: %2$s | MerchantTxnRef: %3$s | Type: "
 "%4$s"
 
-#: inc/neox/abstract-payment.php:282
+#: inc/neox/abstract-payment.php:283
 msgid "NeoX info: "
 msgstr "Thông tin NeoX:"
 
@@ -164,7 +164,7 @@ msgstr "NeoX Sandbox"
 
 #: inc/neox/neox-settings.php:21
 msgid "Enable NeoX sandbox (testing)"
-msgstr "Kích hoạt NeoX sandbox (thử nghiệm)"
+msgstr "Kích hoạt NeoX sandbox (Môi trường thử nghiệm)"
 
 #: inc/neox/neox-settings.php:23
 #, php-format
@@ -218,7 +218,8 @@ msgstr "Phương thức thanh toán"
 #: inc/neox/neox-settings.php:48
 msgid "If you do not select any payment method, the default will be 4 methods"
 msgstr ""
-"Nếu bạn không chọn phương thức thanh toán nào, mặc định sẽ là 4 phương thức."
+"Nếu bạn không chọn phương thức thanh toán nào, mặc định hệ thống sẽ tự chọn "
+"cả 4 phương thức."
 
 #: inc/neox/neox-settings.php:53
 msgid "NeoX Wallet"

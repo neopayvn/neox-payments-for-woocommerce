@@ -5,4 +5,9 @@ This plugin provide fast, secure, and reliable payment options for all types of 
 
 ### 1.0.0 - 18/10/2022
 * First release.
-* Publish plugin
+
+
+### 1.0.2 - 25/10/2022
+* Sanitized, Escaped, and Validated Data
+* Escaped Variables
+* Update logo

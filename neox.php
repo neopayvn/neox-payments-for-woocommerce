@@ -162,8 +162,4 @@ class NeoX {
 		return $links;
 	}
 
-    public static function log_to_console($data){
-        $output = json_encode($data);
-        echo "<script>console.log('{$output}');</script>";
-    }
 }

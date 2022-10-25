@@ -10,7 +10,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-** Woocommerce NeoX Payments - This plugin provide fast, secure, and reliable payment options for all types of businesses **
+** NeoX Payments for WooCommerce - This plugin provide fast, secure, and reliable payment options for all types of businesses **
 
 = FEATURES =
 
@@ -20,14 +20,14 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 = WHERE CAN I CONTRIBUTE MY CODE OR IDEA? =
 
-* You can report bugs or contribute code on [this GitHub repo](https://github.com/neopayvn/wc-neox-payments).
+* You can report bugs or contribute code on [this GitHub repo](https://github.com/neopayvn/neox-payments-for-woocommerce).
 * Please also do let us know if the "bug" is just a grammar/spelling error in both English and Vietnamese. We try to make our products as perfect as possible.
 
 = INSTALLATION =
 
 Follow these steps to install and use the plugin:
 
-1. Upload the plugin files to the `/wp-content/plugins/wc-neox-payments` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/neox-payments-for-woocommerce` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the `Plugins` screen in WordPress.
 3. Go to the `WooCommerce -> NeoX` screen and configure the plugin.
 
@@ -41,4 +41,9 @@ Follow these steps to install and use the plugin:
 
 == Changelog ==
 
-See all change logs on [GitHub repo](https://github.com/neopayvn/wc-neox-payments#changelog).
+See all change logs on [GitHub repo](https://github.com/neopayvn/neox-payments-for-woocommerce#changelog).
+
+= 1.0.1 =
+Sanitized, Escaped, and Validated Data
+Escaped Variables
+Update logo

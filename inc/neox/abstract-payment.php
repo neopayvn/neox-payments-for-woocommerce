@@ -53,7 +53,7 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway {
 		$this->title             = $this->get_option( 'title' );
 		$this->description       = $this->get_option( 'description' )
 		                           . sprintf( '<br/><div align="center" class="neox-logo" id="%1$s"><img src="%2$s"></div>',
-				$this->id . '_logo',
+				$this->id . '_logo.png',
 				apply_filters( $this->id . '_logo', WOO_NEOX_URL . "assets/$this->id.png" ) );
 		$this->order_button_text = $this->get_option( 'order_button_text' );
 		$this->testmode      = 'yes' === $this->get_option( 'testmode', 'no' );
@@ -270,6 +270,7 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway {
 				case '0':
 					// If the payment is successful, update the order
 					$order->payment_complete();
+                    WC()->cart->empty_cart();
 					break;
 				default:
 					// For other cases, do nothing. By default, the order status is still "Pending Payment"
@@ -279,21 +280,21 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway {
 			// Do the last actions based on $type
 			switch ( $type ) {
 				case 'return': // Add info from NeoX and redirect to the appropriate URLs
-					wc_add_notice( __( 'NeoX info: ', 'neox' ) . $this->NeoX_getResponseDescription( $neo_ResponseCode ), 'notice' );
+					wc_add_notice( __( 'NeoX info: ', 'neox-payments-for-woocommerce' ) . $this->NeoX_getResponseDescription( $neo_ResponseCode ), 'notice' );
 					// This is an intentional DRY switch - refer to #neo_ResponseCode above
 					// I need to make sure that `ipn` case below and message_log can be executed as well.
 					switch ( $neo_ResponseCode ) {
 						case '0':
 							// If the payment is successful, redirect to the order page
-							wp_redirect( $this->get_return_url( $order ) );
+                            wp_redirect( get_permalink( $order->get_cancel_order_url_raw() ) );
 							break;
 						case '18':
 							// If the user cancels payment, redirect to the canceled cart page
-							wp_redirect( $order->get_cancel_order_url_raw() );
+							wp_redirect( get_permalink( $order->get_cancel_order_url_raw() ) );
 							break;
 						default:
 							// For other cases, redirect to the payment page
-							wp_redirect( $order->get_checkout_payment_url() );
+							wp_redirect( get_permalink( $order->get_checkout_payment_url() ) );
 							break;
 					}
 					break;
@@ -371,4 +372,5 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway {
 			self::$log->log( $level, $message, array( 'source' => get_called_class() ) );
 		}
 	}
+
 }
