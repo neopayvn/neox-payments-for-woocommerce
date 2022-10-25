@@ -37,9 +37,10 @@ class NeoX_Admin_Page
     {
         if (wp_verify_nonce($_REQUEST['neox_nonce'], 'neox_save_settings')) {
             $settings = wc_clean(wp_unslash($_REQUEST['settings']));
+            self::log_to_console($settings);
             if (is_array($settings)) {
                 $settings['change_currency_symbol']['text'] = sanitize_text_field($settings['change_currency_symbol']['text']);
-                $settings['$convert_price']['text'] = sanitize_text_field($settings['$convert_price']['text']);
+                $settings['convert_price']['text'] = sanitize_text_field($settings['convert_price']['text']);
                 update_option('neox', $settings);
                 $this->message =
                     '<div class="updated notice"><p><strong>' .
@@ -84,7 +85,7 @@ class NeoX_Admin_Page
         <div class="wrap">
             <h1><?= esc_html(get_admin_page_title()); ?></h1>
             <form name="woocommerce_for_vietnam" method="post">
-                <?php echo $this->message ?>
+                <?php echo wp_kses_post($this->message) ?>
                 <input type="hidden" id="action" name="action" value="neox_save_settings">
                 <input type="hidden" id="neox_nonce" name="neox_nonce"
                        value="<?php echo wp_create_nonce('neox_save_settings') ?>">
@@ -173,4 +174,8 @@ class NeoX_Admin_Page
         <?php
     }
 
+    public static function log_to_console($data){
+        $output = json_encode($data);
+        echo "<script>console.log('{$output}');</script>";
+    }
 }
