@@ -37,7 +37,6 @@ class NeoX_Admin_Page
     {
         if (wp_verify_nonce($_REQUEST['neox_nonce'], 'neox_save_settings')) {
             $settings = wc_clean(wp_unslash($_REQUEST['settings']));
-            self::log_to_console($settings);
             if (is_array($settings)) {
                 $settings['change_currency_symbol']['text'] = sanitize_text_field($settings['change_currency_symbol']['text']);
                 $settings['convert_price']['text'] = sanitize_text_field($settings['convert_price']['text']);
@@ -173,9 +172,5 @@ class NeoX_Admin_Page
         </div><!-- #wrap ->
         <?php
     }
-
-    public static function log_to_console($data){
-        $output = json_encode($data);
-        echo "<script>console.log('{$output}');</script>";
-    }
+    
 }
