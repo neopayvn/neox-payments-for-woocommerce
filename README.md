@@ -11,3 +11,7 @@ This plugin provide fast, secure, and reliable payment options for all types of 
 * Sanitized, Escaped, and Validated Data
 * Escaped Variables
 * Update logo
+
+
+### 1.0.3 - 26/10/2022
+* Update version

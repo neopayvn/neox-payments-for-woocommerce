@@ -4,7 +4,7 @@ Tags: neox woocommerce, neox, woocommerce neox, woocommerce neox payments, neox 
 Requires at least: 4.3
 Tested up to: 6.0.3
 Requires PHP: 7.0
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,3 +50,6 @@ Update logo
 
 = 1.0.2 =
 Format code
+
+= 1.0.3 =
+Update version
