@@ -7,7 +7,7 @@
  * Author URI: https://profiles.wordpress.org/neopayvn
  * Text Domain: neox-payments-for-woocommerce
  * Domain Path: /languages
- * Version: 1.0.0
+ * Version: 1.0.2
  *
  * WC requires at least: 3.0
  * WC tested up to: 7.0.0
