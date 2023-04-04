@@ -53,3 +53,6 @@ Format code
 
 = 1.0.3 =
 Update version
+
+= 1.0.3 =
+Support payment with multi currencies: HKD, CHF, SGD, CNY, AUD, CAD, JPY, GBP, EUR, USD, VND.
