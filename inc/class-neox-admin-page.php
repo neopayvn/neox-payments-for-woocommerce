@@ -112,7 +112,7 @@ class NeoX_Admin_Page
                                         echo sprintf(__('Please configure this gateway under <a href="%s">WooCommerce -> Settings -> Checkout</a>.', 'neox-payments-for-woocommerce'), admin_url('admin.php?page=wc-settings&tab=checkout&section=neox_payment'));
                                     }
                                 } else {
-                                    _e('<span style="color: red" ">This gateway is not active on your site. Because NeoX supports HKD, CHF, SGD, CNY, AUD, CAD, JPY, GBP, EUR, USD, VND.</span>', 'neox-payments-for-woocommerce');
+                                    _e('<span style="color: red" ">This gateway is not active on your site. Because NeoX only support HKD, CHF, SGD, CNY, AUD, CAD, JPY, GBP, EUR, USD, VND.</span>', 'neox-payments-for-woocommerce');
                                 }
                                 ?>
                             </label>
@@ -131,7 +131,7 @@ class NeoX_Admin_Page
                             <input type="text" name="settings[change_currency_symbol][text]"
                                    value="<?php echo esc_attr(sanitize_text_field(wp_unslash($settings['change_currency_symbol']['text']))) ?>"
                                    id="change_currency_symbol_text" class="small-text">
-                            <label for="change_currency_symbol_text"><?php _e('Insert a text to change the default symbol <code>đ</code>, <code>¥</code>, <code>£</code>, <code>€</code>', 'neox-payments-for-woocommerce') ?></label>
+                            <label for="change_currency_symbol_text"><?php _e('Insert a text to change the default symbol <code>đ</code>. E.g: <code>¥</code>, <code>£</code>, <code>€</code>', 'neox-payments-for-woocommerce') ?></label>
                         </td>
                     </tr>
                     <tr>
