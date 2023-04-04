@@ -134,7 +134,7 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway
         $args = array(
             'neo_Amount' => $order->get_total(),
             'neo_Command' => 'PAY',
-            'neo_Currency' => 'VND',
+            'neo_Currency' => get_woocommerce_currency(),
             'neo_Locale' => ('vi' == get_locale()) ? 'vi' : 'en',
             'neo_MerchantCode' => $this->merchant_code,
             'neo_MerchantTxnID' => sprintf('%1$s_%2$s', $order->get_id(), date('YmdHis')),

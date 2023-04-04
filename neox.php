@@ -120,10 +120,10 @@ class NeoX
         }
 
         $settings = self::get_settings();
-
+        $supported_currencies = array("HKD","CHF","SGD","CNY","AUD","CAD","JPY","GBP","EUR","USD","VND");
         // Check if "Add the NeoX Gateway" is enabled
         if ('yes' == $settings['add_neox_gateway']['enabled']
-            and 'VND' == get_woocommerce_currency()
+            and in_array(get_woocommerce_currency(), $supported_currencies)
         ) {
             include('inc/class-neox-payment.php');
             include('inc/class-neox-pages.php');

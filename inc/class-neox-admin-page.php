@@ -104,20 +104,21 @@ class NeoX_Admin_Page
                             <label for="">
                                 <?php
                                 echo sprintf(__('Your store currency is <code>%s</code>. ', 'neox-payments-for-woocommerce'), get_woocommerce_currency());
-                                if ('VND' == get_woocommerce_currency()) {
+                                $supported_currencies = array("HKD","CHF","SGD","CNY","AUD","CAD","JPY","GBP","EUR","USD","VND");
+                                if (in_array(get_woocommerce_currency(), $supported_currencies)) { 
                                     _e('NeoX can work on your site.', 'neox-payments-for-woocommerce');
                                     echo '<br/>';
                                     if ('yes' == $settings['add_neox_gateway']['enabled']) {
                                         echo sprintf(__('Please configure this gateway under <a href="%s">WooCommerce -> Settings -> Checkout</a>.', 'neox-payments-for-woocommerce'), admin_url('admin.php?page=wc-settings&tab=checkout&section=neox_payment'));
                                     }
                                 } else {
-                                    _e('<span style="color: red" ">This gateway is not active on your site. Because NeoX supports VND only.</span>', 'neox-payments-for-woocommerce');
+                                    _e('<span style="color: red" ">This gateway is not active on your site. Because NeoX supports HKD, CHF, SGD, CNY, AUD, CAD, JPY, GBP, EUR, USD, VND.</span>', 'neox-payments-for-woocommerce');
                                 }
                                 ?>
                             </label>
                         </td>
                     <tr>
-                        <th scope="row"><?php _e('Change VND currency symbol', 'neox-payments-for-woocommerce') ?></th>
+                        <th scope="row"><?php _e('Change currency symbol', 'neox-payments-for-woocommerce') ?></th>
                         <td>
                             <input name="settings[change_currency_symbol][enabled]" type="hidden" value="no">
                             <input name="settings[change_currency_symbol][enabled]" type="checkbox"
@@ -130,7 +131,7 @@ class NeoX_Admin_Page
                             <input type="text" name="settings[change_currency_symbol][text]"
                                    value="<?php echo esc_attr(sanitize_text_field(wp_unslash($settings['change_currency_symbol']['text']))) ?>"
                                    id="change_currency_symbol_text" class="small-text">
-                            <label for="change_currency_symbol_text"><?php _e('Insert a text to change the default symbol <code>đ</code>', 'neox-payments-for-woocommerce') ?></label>
+                            <label for="change_currency_symbol_text"><?php _e('Insert a text to change the default symbol <code>đ</code>, <code>¥</code>, <code>£</code>, <code>€</code>', 'neox-payments-for-woocommerce') ?></label>
                         </td>
                     </tr>
                     <tr>
@@ -148,7 +149,7 @@ class NeoX_Admin_Page
                                        value="<?php echo esc_attr(sanitize_text_field(wp_unslash($settings['convert_price']['text']))) ?>"
                                        id="convert_price_text" class="small-text">
                                 <label for="convert_price_text"><?php _e('Choose what you want to change. E.g:', 'neox-payments-for-woocommerce') ?>
-                                    <code>K</code>, <code>nghìn</code>, <code>ngàn</code></label>
+                                    <code>K</code>, <code>nghìn</code>, <code>ngàn</code>, <code>thousand</code></label>
                             </fieldset>
                         </td>
                     </tr>
