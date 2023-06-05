@@ -4,7 +4,7 @@ Tags: neox woocommerce, neox, woocommerce neox, woocommerce neox payments, neox 
 Requires at least: 4.3
 Tested up to: 6.0.3
 Requires PHP: 7.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,3 +56,6 @@ Update version
 
 = 1.0.4 =
 Support payment with multi currencies: HKD, CHF, SGD, CNY, AUD, CAD, JPY, GBP, EUR, USD, VND.
+
+= 1.0.5 =
+* Remove useless zero digits from decimals

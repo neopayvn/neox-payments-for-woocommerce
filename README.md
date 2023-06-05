@@ -18,3 +18,6 @@ This plugin provide fast, secure, and reliable payment options for all types of 
 
 ### 1.0.4 - 04/03/2023
 * Support payment with multi currencies: HKD, CHF, SGD, CNY, AUD, CAD, JPY, GBP, EUR, USD, VND.
+
+### 1.0.5 - 05/06/2023
+* Remove useless zero digits from decimals

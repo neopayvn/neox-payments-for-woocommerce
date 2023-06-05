@@ -132,7 +132,7 @@ abstract class WC_NeoX_Abstract extends WC_Payment_Gateway
 
         $methods = $this->get_methods();
         $args = array(
-            'neo_Amount' => $order->get_total(),
+            'neo_Amount' => $order->get_total() + 0,
             'neo_Command' => 'PAY',
             'neo_Currency' => get_woocommerce_currency(),
             'neo_Locale' => ('vi' == get_locale()) ? 'vi' : 'en',
